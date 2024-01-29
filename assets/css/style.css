@@ -1,0 +1,492 @@
+/*MAIN SETTINGS*/
+:root{
+    --light-colour: white;
+    --dark-colour: black;
+    --principal-colour: #f33c3c;
+    --secondary-colour: #211c47;
+    --tertiary-colour: #232131;
+
+    --titles-subtitles-font: poppins-bold;
+    --regular-font: poppins-light;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--regular-font);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: poppins-light;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+/*END MAIN SETTINGS*/
+
+
+
+/*HEADER*/
+header {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100svh;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px;
+    margin-bottom: 100px;
+}
+
+.header-small-subtittle {
+    font-family: var(--titles-subtitles-font);
+    color: var(--light-colour);
+    font-size: 22px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    color: var(--light-colour);
+    text-decoration: none;
+    margin: 0 25px;
+}
+
+nav ul li a:hover{
+    border-bottom: 4px solid var(--principal-colour);
+    border-radius: 1px;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    width: 50%;
+    color: var(--light-colour);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-text h1{
+    font-family: var(--titles-subtitles-font);
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-bottom: 15px;
+}
+
+.header-text h2 {
+    font-family: var(--titles-subtitles-font);
+    font-size: 40px;
+}
+
+.header-text h3 {
+    font-family: var(--titles-subtitles-font);
+    font-size: 30px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.white-btn {
+    border: 2px solid var(--light-colour);
+    color: var(--light-colour);
+    background: none;
+    padding: 10px 40px;
+    font-size: 16px;
+}
+
+.carousel-indicators {
+    list-style: circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-colour);
+    margin-left: 85px;
+    font-size: 45px;
+}
+
+.carousel-indicators li {
+    padding: 13px;
+}
+
+@media(max-width: 900px) {
+    .menu-mobile {
+        display: flex;
+    }
+    .menu-screen {
+        display: none;
+    }
+    .header-text {
+        width: 90%;
+    }
+    header {
+        height: auto;
+    }
+}
+/*END HEADER*/
+
+
+
+/*INFO SECTION*/
+.info {
+    background-image: url('../images/us-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.info h3 {
+    font-family: var(--titles-subtitles-font);
+    color: var(--light-colour);
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.info h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Adjust as needed */
+    width: 25%; /* Adjust the width of the underline */
+    height: 4px; /* Adjust the height and style as needed */
+    background-color: var(--principal-colour); /* Adjust the color of the underline */
+    transform: translateX(-50%); /* Center the underline horizontally */
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.row-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+    color: var(--light-colour);
+    padding: 50px 15px;
+}
+
+.card h4 {
+    padding: 15px 0;
+    font-family: var(--titles-subtitles-font);
+    font-size: 20px;
+}
+
+@media(max-width: 700) {
+
+    .card{
+        width: 80%;
+    }     
+
+}
+/*END INFO SECTION*/
+
+
+
+/*HEALTHY SECTION*/
+.healthy-info {
+    background-image: url('../images/healthy-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.healthy-info h3 {
+    font-family: var(--titles-subtitles-font);
+    color: var(--light-colour);
+    font-size: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+.healthy-info p {
+    color: var(--light-colour);
+    width: 70%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/*END HEALTHY*/
+
+
+
+
+/*TRAINERS SECTION*/
+
+.trainers{
+    background-image: url('../images/trainer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px;
+}
+
+.trainers h3 {
+    font-family: var(--titles-subtitles-font);
+    color: var(--light-colour);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.trainers h3::after{
+        content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Adjust as needed */
+    width: 5%; /* Adjust the width of the underline */
+    height: 4px; /* Adjust the height and style as needed */
+    background-color: var(--principal-colour); /* Adjust the color of the underline */
+    transform: translateX(-50%); /* Center the underline horizontally */
+}
+
+.trainers-profiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.trainer-profile{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainer-profile h4{
+    color: var(--light-colour);
+    font-family: var(--titles-subtitles-font);
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.trainer-profile img{
+    border-radius: 5%;
+    position: relative;
+}
+
+.trainer-social-media{
+    background-color: var(--light-colour);
+    border-radius: 25px;
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -25px;
+    z-index: 3;
+}
+/*END TRAINERS SECTION*/
+
+
+
+/*CONTACT SECTION*/
+.contact{
+    background-color: var(--secondary-colour);
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+}
+
+.contact-img{
+    width: 50%;
+}
+
+.contact-img img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-container{
+    padding-left: 30px;
+    width: 40%;
+}
+
+.contact-container h3{
+    font-family: var(--titles-subtitles-font);
+    color: var(--light-colour);
+    font-size: 30px;
+    margin-top: 25%;
+    position: relative;
+}
+
+.contact-container h3::after{
+    content: ''; /* Required for pseudo-elements */
+position: absolute;
+bottom: 0;
+left: 3%; /* Adjust as needed */
+width: 5%; /* Adjust the width of the underline */
+height: 4px; /* Adjust the height and style as needed */
+background-color: var(--principal-colour); /* Adjust the color of the underline */
+transform: translateX(-50%); /* Center the underline horizontally */
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form input::placeholder {
+    color: var(--dark-colour);
+    font-weight: bold;
+    opacity: 3;
+}
+
+.contact-form textarea{
+    height: 150px;
+    margin-bottom: 20px;
+    resize: none;
+    width: 100%;
+}
+
+.contact-form textarea::placeholder {
+    color: var(--dark-colour);
+    font-weight: bold;
+    opacity: 3;
+    padding-left: 10px;
+    padding-top: 60px;
+}
+
+.btn-red{
+    background-color: var(--principal-colour);
+    color: var(--light-colour);
+    border: none;
+    width: 30% !important; 
+}
+
+@media (max-width: 770px) {
+
+    .contact {
+        flex-wrap: wrap;
+    }
+
+    .contact-img{
+        width: 100%;
+    }
+
+    .contact-container{
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    .contact-container h3{
+        margin-top: 55px;
+        text-align: center;
+    }
+
+    .contact-container h3::after{
+        left: 50%;
+    }
+}
+/*END CONTACT SECTION*/
+
+
+
+/*FOOTER*/
+
+.footer-info{
+    background-color: var(--tertiary-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info-item{
+    text-align: center;
+    width: 350px;
+    padding: 20px 0;
+}
+
+.footer-info-item a{
+    text-decoration: none;
+}
+
+.footer-info-item p{
+    color: var(--light-colour);
+    margin-top: 30px;
+    white-space: nowrap;
+}
+
+.copyright{
+    background-color: var(--light-colour);
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+}
+
+@media(max-width: 700px) {
+    .footer-container{
+        flex-wrap: wrap;
+    }
+}
+
+/*END FOOTER*/
